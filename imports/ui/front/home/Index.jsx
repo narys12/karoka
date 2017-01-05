@@ -1,14 +1,14 @@
 import React, { PropTypes } from 'react';
 import { Container } from 'reactstrap';
-import Header from '../Header.jsx';
-import Footer from '../Footer.jsx';
+import Head from '../Head.jsx';
+import Foot from '../Foot.jsx';
 
 export default class Index extends React.Component {
   render() {
     return (
       <Container>
-          <Header />
-          <Footer />
+        <Head />
+        <Foot />
       </Container>
     );
   }
