@@ -1,19 +1,25 @@
 import React from 'react';
-import { Row, Col, Input, Nav } from 'reactstrap';
+import { Row, Col, Input, Nav, NavItem, NavLink, Form, Button, FormGroup } from 'reactstrap';
 
 export default class Header extends React.Component {
+
   render() {
     return (
       <Row>
-        <Col xs="4"> Logo </Col>
-        <Col xs="8"> 
+        <Col md="4"> Logo </Col>
+        <Col md="8">
           <Row>
-            <Input>
-            </Input>
+            <Form inline>
+              <FormGroup>
+                <Input placeholder="Search..."/>
+                <Input type="submit" value="Search" />
+              </FormGroup>
+            </Form>
           </Row>
           <Row>
-            <Nav>
-
+            <Nav tabs>
+              <NavItem><NavLink href="/" header> Home </NavLink></NavItem>
+              <NavItem><NavLink href="#"> Help </NavLink></NavItem>
             </Nav>
           </Row>
         </Col>
