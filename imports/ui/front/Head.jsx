@@ -1,18 +1,21 @@
 import React from 'react';
+import SearchForm from './SearchForm.jsx';
+import Menu from './Menu.jsx';
 import {
   Row,
   Col,
   Input,
-  Nav,
-  NavItem,
-  NavLink,
-  Form,
-  Button,
-  FormGroup
 } from 'reactstrap';
 
-export default class Head extends React.Component {
+const styles = {
+  search: {
+    right: '0',
+    height: '50',
+    'background-color': '#b0e0e6'
+  }
+};
 
+export default class Head extends React.Component {
   render() {
     return (
       <Row>
@@ -20,27 +23,13 @@ export default class Head extends React.Component {
           Logo
         </Col>
         <Col xs="10">
-          <Row className="text-xs-right">
-            <Form inline>
-              <FormGroup>
-                <Input placeholder="Search..."/>
-                <Input type="submit" value="Search"/>
-              </FormGroup>
-            </Form>
+          <Row className="text-xs-right" >
+            <Col xs="12" style={styles.search}>
+              <SearchForm />
+            </Col>
           </Row>
           <Row>
-            <Nav tabs>
-              <NavItem>
-                <NavLink href="/">
-                  Home
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#">
-                  Help
-                </NavLink>
-              </NavItem>
-            </Nav>
+            <Menu />
           </Row>
         </Col>
       </Row>
