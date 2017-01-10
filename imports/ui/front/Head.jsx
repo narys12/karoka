@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchForm from './SearchForm.jsx';
 import Menu from './Menu.jsx';
+import AccountsUIWrapper from './AccountsUIWrapper.jsx';
 import {
   Row,
   Col,
@@ -24,7 +25,10 @@ export default class Head extends React.Component {
         </Col>
         <Col xs="10">
           <Row className="text-xs-right" >
-            <Col xs="12" style={styles.search}>
+            <Col xs="6" >
+                <AccountsUIWrapper />
+            </Col>
+            <Col xs="6" >
               <SearchForm />
             </Col>
           </Row>

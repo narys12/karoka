@@ -5,11 +5,6 @@ import {
     NavLink
 } from 'reactstrap';
 
-const styles = {
-    postion: 'absolute',
-    ritgh: '0'
-};
-
 export default class Menu extends React.Component {
     render() {
         return (
