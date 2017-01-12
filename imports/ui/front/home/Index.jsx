@@ -3,7 +3,6 @@ import {Container} from 'reactstrap';
 import Head from '../Head.jsx';
 import Foot from '../Foot.jsx';
 import Recent from './Recent.jsx';
-import User from '../User.jsx';
 
 export default class Index extends React.Component {
 
@@ -12,8 +11,7 @@ export default class Index extends React.Component {
       <Container>
         <Head/>
         <Container>
-          <Recent />
-          <User />
+          <Recent/>
         </Container>
         <Foot/>
       </Container>

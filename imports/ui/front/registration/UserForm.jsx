@@ -10,13 +10,10 @@ import {
     Button
 } from 'reactstrap';
 
-export default class User extends React.Component {
+export default class UserForm extends React.Component {
 
     constructor(props) {
         super(props);
-        this.login = this
-            .login
-            .bind(this);
     }
 
     render() {
@@ -50,7 +47,7 @@ export default class User extends React.Component {
                         size: 10,
                         offset: 2
                     }}>
-                        <Button onClick={this.login}>Submit</Button>
+                        <Button onClick={this.login.bind(this)}>Submit</Button>
                     </Col>
                 </FormGroup>
             </Form>
